@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Homera Living</title>
+    <style>
+        :root {
+            --navy: #102d46;
+            --gold: #e9a23b;
+            --muted: #647587;
+            --line: #e4eaf0
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Inter, Arial, sans-serif;
+            background: linear-gradient(145deg, #f7f9fb, #fff7eb);
+            color: var(--navy);
+            display: flex;
+            flex-direction: column
+        }
+
+        header {
+            height: 84px;
+            background: #ffffffd9;
+            border-bottom: 1px solid var(--line);
+            display: flex;
+            align-items: center;
+            padding: 0 max(24px, calc((100% - 1160px)/2))
+        }
+
+        .brand {
+            font-weight: 900;
+            letter-spacing: 1.4px;
+            font-size: 21px;
+            color: var(--navy);
+            text-decoration: none
+        }
+
+        .brand span {
+            color: var(--gold)
+        }
+
+        main {
+            flex: 1;
+            display: grid;
+            place-items: center;
+            padding: 44px 20px
+        }
+
+        .card {
+            width: min(100%, 650px);
+            text-align: center;
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 28px;
+            padding: clamp(32px, 7vw, 66px);
+            box-shadow: 0 24px 70px #102d4610
+        }
+
+        .check {
+            width: 76px;
+            height: 76px;
+            margin: 0 auto 25px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: #e9f7ef;
+            color: #218653;
+            font-size: 37px;
+            font-weight: 700
+        }
+
+        .eyebrow {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 11px;
+            font-weight: 800;
+            color: #b77a20;
+            margin-bottom: 12px
+        }
+
+        h1 {
+            font-size: clamp(32px, 5vw, 46px);
+            letter-spacing: -1.5px;
+            line-height: 1.12;
+            margin: 0 0 18px
+        }
+
+        p {
+            color: var(--muted);
+            font-size: 16px;
+            line-height: 1.8;
+            margin: 0 auto 24px;
+            max-width: 480px
+        }
+
+        .ref {
+            display: inline-block;
+            background: #f6f8fa;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 13px 18px;
+            margin: 0 0 28px;
+            font-size: 13px;
+            color: var(--muted)
+        }
+
+        .ref strong {
+            color: var(--navy);
+            letter-spacing: .4px
+        }
+
+        .actions {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            border-radius: 12px;
+            padding: 14px 20px;
+            font-weight: 750;
+            font-size: 14px
+        }
+
+        .primary {
+            background: var(--navy);
+            color: #fff
+        }
+
+        .secondary {
+            background: #fff;
+            border: 1px solid var(--line);
+            color: var(--navy)
+        }
+
+        footer {
+            text-align: center;
+            padding: 22px;
+            color: #7d8b98;
+            font-size: 12px
+        }
+
+        @media(max-width:480px) {
+            header {
+                height: 72px
+            }
+
+            .card {
+                border-radius: 22px
+            }
+
+            .actions {
+                flex-direction: column
+            }
+
+            .btn {
+                width: 100%
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header><a class="brand" href="index.html">HOMERA <span>LIVING</span></a></header>
+    <main>
+        <section class="card" aria-labelledby="thankYouTitle">
+            <div class="check" aria-hidden="true">✓</div>
+            <div class="eyebrow">Request received</div>
+            <h1 id="thankYouTitle">Thank you for reaching out.</h1>
+            <p>Your support request has been submitted in this demo. The Homera Living support team would review your
+                message and help you with the next steps.</p>
+            <div class="actions"><a class="btn primary" href="index.html">Back to home</a><a class="btn secondary"
+                    href="index.html#products">Explore products</a></div>
+        </section>
+    </main>
+    <footer>© 2026 Homera Living · Demo storefront for learning purposes</footer>
+    <script>const ref = new URLSearchParams(window.location.search).get('ref'); if (ref && /^HL-\d{6}$/.test(ref)) { document.getElementById('reference').textContent = ref }</script>
+</body>
+
+</html>
